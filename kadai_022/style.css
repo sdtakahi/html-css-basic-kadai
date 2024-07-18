@@ -1,0 +1,87 @@
+h1 {
+    margin: 0px;
+    color: rgb(255, 255, 255);
+}
+
+p {
+    margin: 0px;
+}
+
+body {
+    margin: 0px;
+}
+
+header {
+    margin-bottom: 20px;
+    background-color: rgb(244, 79, 79);
+    text-align: center;
+}
+
+article p, article a {
+    font-size: 20px;
+}
+/* mainのスタイル設定 */
+main {
+    padding: 10px;
+}
+/* id名parentのスタイル設定 */
+#parent {
+    display: flex;
+    justify-content: space-between;
+}
+/* class名contentsのスタイル設定 */
+.contents {
+    border: 3px solid rgb(238, 204, 204);
+    flex-basis: 25%;
+    padding: 10px 15px;
+    margin: 20px 0;
+    text-align: center;
+}
+/* h2要素のスタイル設定 */
+h2 {
+    font-size: 25px;
+    border-bottom: 3px dotted rgb(236, 122, 122);
+    position: relative;
+}
+/* h2要素の前に表示する●記号のスタイル設定 */
+h2::before {
+    content: '●';
+    color: rgb(239, 111, 139);
+    
+}
+/* class名contents内２番目のp要素の一番目の文字スタイル設定 */
+.contents p:nth-of-type(2)::first-letter {
+    font-weight: bold;
+    color: rgb(94, 206, 249);
+}
+/* class名contents内のimg要素のスタイル設定 */
+.contents img {
+    margin: 10px 0;
+    width: 70%;
+}
+/* footer要素のスタイル設定 */
+footer {
+    background-color: rgb(244, 79, 79);
+    text-align: center;
+    padding: 10px 0;
+}
+/* 訪問済みリンクのスタイル設定 */
+footer a:visited {
+    color: rgb(193, 234, 251);
+}
+/* マウスカーソルが乗った時のスタイル設定 */
+footer a:hover {
+    color: rgb(245, 178, 168);
+}
+/* 画面幅が768px以下の場合のスタイル設定 */
+@media (max-width:768px) {
+    h2 {
+        font-size: 25px;
+    }
+    p {
+        font-size: 25px;
+    }
+    #parent {
+        flex-direction: column;
+    }
+}
